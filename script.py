@@ -1,15 +1,13 @@
 import os
 from datetime import datetime
 
-# Cria a pasta se não existir
-os.makedirs("arquivos", exist_ok=True)
+os.makedirs("bot_files", exist_ok=True)
 
-# Gera nome do arquivo com data e hora
-agora = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-arquivo = f"arquivos/{agora}.txt"
+now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+file = f"bot_files/{now}.txt"
 
 # Escreve data e hora dentro do arquivo
-with open(arquivo, "w") as f:
-    f.write(f"Execução em: {datetime.now()}\n")
+with open(file, "w") as f:
+    f.write(f"Executed at: {datetime.now()}\n")
 
-print(f"Arquivo criado: {arquivo}")
+print(f"File generated: {file}")
